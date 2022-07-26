@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+  visibility: visible;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(103, 103, 103);
+}
+
+body {
+  background-color: #f4c66a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  width: 60rem;
+  height: 32rem;
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.my-wallets {
+  flex: 35%;
+  background-color: rgb(240, 240, 240);
+  overflow: auto;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.header h2 {
+  font-weight: 400;
+}
+
+.boxes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.account {
+  border: 2px solid rgb(212, 212, 212);
+  border-radius: 6px;
+  width: 270px;
+  height: 135px;
+  padding: 0px 10px;
+  background-color: white;
+  color: grey;
+  margin: 12px;
+}
+
+.account:hover,
+.active {
+  transition: 0.5s;
+  outline: 1px solid rgb(127, 142, 187);
+  border: 2px solid rgb(127, 142, 187);
+}
+
+.balance {
+  flex: 65%;
+  overflow-y: auto;
+}
+
+
+.header-of-balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0px;
+  border-bottom: 2px solid rgb(201, 201, 201);
+  width: 85%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.header-of-balance h2 {
+  font-weight: 400;
+}
+
+.product {
+  padding: 16px 40px;
+  display: flex;
+}
+
+.details {
+  display: flex;
+  flex: 30%;
+  flex-direction: column;
+}
+
+.product h1 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+small {
+  font-size: 14px;
+  color: grey;
+  margin-top: 8px;
+  font-weight: 300;
+}
+
+span {
+  color: rgb(127, 142, 187);
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.product img {
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+  margin-right: 18px;
+}
+
+.plus-container {
+  margin: 10px;
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+    overflow: scroll;
+  }
+  .boxes {
+    flex-direction: row;
+  }
+  .my-wallets {
+    flex: 100%;
+    padding: 20px;
+    overflow-y: scroll;
+  }
+  .balance {
+    overflow: hidden;
+  }
+}
