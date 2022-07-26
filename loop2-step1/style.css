@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background-color: #de8a89;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  margin-left:250px ;
+}
+nav p {
+  width: 650px;
+  color: white;
+}
+ul {
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  flex-wrap: nowrap;
+}
+ul li {
+  font-size: 4rem;
+  color: white;
+  font-weight: 800;
+  opacity: 0.4;
+  margin-right: 50px;
+  cursor: pointer;
+  padding: 20px 0;
+}
+li.active {
+  opacity: 1;
+}
+ul li:hover {
+  opacity: 0.6;
+}
+
+.box-container {
+  background-color: #de8a89;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  position: relative;
+}
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background: white;
+  opacity: 0.4;
+  align-self: flex-start;
+}
+.arrow:hover {
+  opacity: 0.6;
+}
+.box {
+  width: 330px;
+  height: 330px;
+  padding: 100px 40px;
+}
+.box h4 {
+  color: #de8a89;
+  padding: 10px 0px;
+  font-size: 18px;
+}
+.box p {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  overflow: visible;
+}
+
+.btn {
+  position: absolute;
+  padding: 20px 110px;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  left: 130px;
+  top: 300px;
+  transition: 0.2s;
+}
+.btn:hover {
+  transform: translate(0, -6px);
+  transition: 0.2s;
+}
+@media screen and (max-width: 650px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .box-container {
+
+    flex-direction: column;
+   height: 170vh;
+  
+  }
+  .arrow {
+    display: none;
+  }
+  nav {
+    margin-left:400px ;
+    transform: scale(0.7);
+  }
+  .btn {
+    top: 1050px;
+    left: 30px;
+  }
+}

@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+body {
+  background: #2F2F2F;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 130vh;
+}
+.container {
+  background: #FDEC51;
+  width: 34rem;
+  min-height: 42rem;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 60px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.header-account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+}
+.header-account h1 {
+  font-size: 1.2rem;
+  font-weight: 50;
+}
+.header-account img {
+  transform: scale(0.7);
+  opacity: 0.65;
+  cursor: pointer;
+}
+.header-account img:hover {
+  opacity: 1;
+
+}
+.account-form-container {
+  background-color: white;
+  padding: 70px 50px 50px;
+  width: 34rem;
+  margin: 40px 0px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.account-form-container img {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: -30px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.next-each-other {
+  display: flex;
+  flex-direction: row;
+}
+#to-fix {
+  margin-left:147px
+}
+label {
+  color: #999;
+  font-size: 13px;
+  font-weight: 500;
+}
+input {
+  color: #999;
+  padding: 5px 0px;
+  border: none;
+  border-bottom: 1px solid #cbcbcb;
+  outline: none;
+  margin-bottom: 30px;
+  width: 100%;
+
+}
+textarea {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #cbcbcb;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.footer-account {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-account span {
+  margin-left: 30px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.footer-account span:hover {
+  opacity: 1;
+  float: left;
+  color: black;
+}
+@media screen and (max-width:600px) {
+  .account-form-container {
+    width: 28rem;
+  }
+  .container {
+    padding: 40px;
+  }
+  #to-fix {
+    margin-left:100px
+  }
+}

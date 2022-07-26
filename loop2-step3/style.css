@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: white;
+}
+body {
+    background: linear-gradient(180deg, #B885E6, #8689EF);
+    padding: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    background: #5F5280;
+    min-width: 20rem;
+    /* min-height: 20rem; */
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.header {
+    background: linear-gradient(90deg, #8b4ac3, #9092d8);
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header img {
+    cursor: pointer;
+}
+
+.header li::before {
+    content: url("photo.svg");
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    transform: scale(0.65);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 17px;
+    top: 38px;
+    cursor: pointer;
+}
+.header::after {
+    content: "";
+    height: 46px;
+    width: 2px;
+    background-color: white;
+    position: absolute;
+    left: 36px;
+    top: 0;
+}
+
+ul {
+    margin-left: 56px;
+}
+ul li{
+    font-size: 26px;
+}
+span {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+.main-content{
+    margin: 30px 0;
+    position: relative;
+}
+.main-content span {
+    opacity: 0.85;
+
+}
+.main-content ul li {
+    line-height: 35px;
+}
+.main-content ul li span:hover {
+    opacity: 1;
+}
+
+.main-content::after {
+
+    content: "";
+    height: 34px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.805);
+    position: absolute;
+    left: 36px;
+    top: -30px;
+}
+.main-content::before {
+
+    content: "";
+    height: 16px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.805);
+    position: absolute;
+    left: 36px;
+    top: 29px;
+}
+.main-content ul li::after {
+    content: "";
+    height: 16px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.805);
+    position: absolute;
+    left: 36px;
+    top: 68px;
+}
+.main-content ul li::before {
+    content: "";
+    height: 40px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.805);
+    position: absolute;
+    left: 36px;
+    top: 106px;
+}
+
+.footer {
+    background: linear-gradient(90deg, #8b4ac3, #9092d8);
+    padding: 20px 0;
+    position: relative;
+}
+.footer::before {
+    content: url("folder.svg");
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    transform: scale(0.65);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 18px;
+    left: 17px;
+    z-index: 1;
+    cursor: pointer;
+}
+.footer::after {
+    content: "";
+    height: 72px;
+    width: 2px;
+    background-color: white;
+    position: absolute;
+    left: 36px;
+    top: 0;
+}
+
+
