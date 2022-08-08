@@ -1,0 +1,248 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242b3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  height: 600px;
+  width: 840px;
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  border-radius: 4px;
+  padding-bottom: 20px;
+}
+
+.side-container {
+  width: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+
+.side-container::after {
+  content: "";
+  width: 2px;
+  height: 380px;
+  top: 32px;
+  right: 7.4px;
+  background-color: #d5d5d5;
+  position: absolute;
+}
+
+.side-container span {
+  transform: scale(1.2);
+  color: #d5d5d5;
+  margin: 18px;
+  padding: 0px 22px;
+  border-right: 2px solid transparent;
+  cursor: pointer;
+}
+
+.side-container span:hover,
+#activated {
+  color: #5a81f5;
+  border-right: 2px solid #5a81f5;
+}
+
+.side-container span:nth-child(1) {
+  color: #5a81f5;
+  transform: scale(1.2) rotate(180deg);
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+.side-container span:nth-child(1):hover {
+  color: #5a81f5;
+}
+
+.side-container img {
+  width: 45px;
+  border-radius: 50%;
+  border: 2px solid #5a81f5;
+  margin-top: 170px;
+}
+
+.main-content {
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 26px 4px;
+  height: 100%;
+}
+
+.main-content h4 {
+  font-weight: bold;
+  color: #9e9ea0;
+  padding-left: 4px;
+}
+
+.main-content .header {
+  height: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 4px;
+}
+
+.main-content .header h1 {
+  font-size: 60px;
+}
+
+.main-content .header a {
+  text-decoration: none;
+  color: #5a81f5;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid #5a81f5;
+  padding: 12px 50px;
+}
+
+.main-content .header a:hover {
+  background-color: #ebeffa;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 500px;
+}
+
+.gallery .img-box {
+  width: 31.3%;
+  height: 200px;
+  margin: 5px;
+  position: relative;
+}
+
+.gallery #different {
+  width: 64%;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+}
+
+#fade {
+  visibility: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(50, 68, 121, 0.5);
+  box-shadow: 0 4px 10px rgb(80 118 231 / 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#fade span {
+  color: #d5d5d5;
+  transform: scale(1.3);
+  margin: 18px;
+  cursor: pointer;
+}
+
+#fade span:hover {
+  color: #fff9f9;
+}
+
+.gallery .img-box:hover #fade {
+  visibility: visible;
+}
+
+@media screen and (max-width: 830px) {
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 300vh;
+  }
+
+  .side-container {
+    width: 100%;
+    height: 70px;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    background-color: #fff;
+  }
+
+  .side-container span {
+    height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .side-container span:nth-child(1) {
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  .side-container img {
+    width: 35px;
+    border-radius: 50%;
+    border: 2px solid #5a81f5;
+    margin-top: 0px;
+    margin-right: 20px;
+  }
+
+  .side-container span:hover,
+  #activated {
+    color: #5a81f5;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid #5a81f5;
+  }
+
+  .side-container span {
+    padding: 16px 0px;
+    border-right: 1px solid transparent;
+  }
+
+  .side-container::after  {
+    display: none;
+  }
+
+  .main-content {
+    width: 100%;
+    min-height: 200vh;
+    flex-direction: column;
+  }
+
+  .gallery {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .gallery .img-box {
+    width: 100%;
+    height: 70%;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gallery #different {
+    width: 100%;
+  }
+}
