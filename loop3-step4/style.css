@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../img/background.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 11px 13px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.container .img-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  perspective: 2000px;
+}
+
+.container .img-frame .img-cont {
+  background: url("../img/kanye.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.container .img-frame .img-cont:first-child {
+  border-radius: 6px 0 0 6px;
+  background-position: 12% 0;
+}
+
+.container .img-frame .img-cont:last-child {
+  transition:  0.2s;
+  border-radius: 0 6px 6px 0;
+  background-position: 90% 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+}
+
+.container:hover .img-frame .img-cont:last-child {
+  transform: rotateY(-50deg);
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.35);
+}
+
+.container:hover .icon {
+  transition: 0.2s 0.2s;
+  z-index: 10;
+}
+
+.container .icon {
+  position: relative;
+  float: right;
+  border-radius: 6px;
+  z-index: 0;
+}
+
+.container .icon img {
+  display: block;
+  cursor: pointer;
+  opacity: 0.6;
+  width: 30px;
+  margin: 20px 18px 40px;
+  transition:  0.1s;
+}
+
+.container .icon img:hover {
+  opacity: 1;
+}
